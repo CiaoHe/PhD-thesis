@@ -585,6 +585,7 @@
 %
 
 \setcounter{secnumdepth}{2}
+\setcounter{secnumdepth}{3}
 
 % COPYRIGHT
 %
@@ -1556,7 +1557,7 @@ scholarly research.}
 
 % Chan:
 %     Add a new definition for the co-adviosr.
-\def\coadvisor#1{\member{#1, Thesis Supervisor}}
+\def\coadvisor#1{\member{#1, Thesis Co-Supervisor}}
 
 % Set default values for department name, advisor name, and current year, and
 % the degree name.
@@ -1771,6 +1772,8 @@ scholarly research.}
 %     {\normalsize in \@department\par}
 %      \vglue 7em
      {\normalsize in \@subject\par}
+     \vglue 6ex
+     {\normalsize Cosupervised by Prof. {Yuan YAO} and Prof. {Yangqiu SONG}}
      \vglue 6ex
 % Chan:
 %	Make changes according to the guidelines released on March 2001.
@@ -2080,7 +2083,7 @@ scholarly research.}
     \ifactingdefined
       \member{#1, Acting Head of Department}
     \else
-      \member{#1, Head of Department}
+      \member{#1, Head of Division of Emerging Interdisciplinary Areas}
     \fi
     \dheaddefinedtrue
   \fi
@@ -2102,21 +2105,30 @@ scholarly research.}
 %in your thesis.  ......... Wei Xiong
 %begin
 \def\nameDefinition{Definition}
+\def\nameAssumption{Assumption}
 \def\nameTheorem{Theorem}
 \def\nameLemma{Lemma}
+\def\nameProposition{Proposition}
 \def\nameAlgorithm{Algorithm}
 \def\nameConjecture{Conjecture}
 \def\nameExample{Example}  % added by WU,Zhaojun
+\def\nameRemark{Remark} 
 
-\newtheorem{definition}{\nameDefinition}[section]
-\newtheorem{theorem}{\nameTheorem}[section]
-\newtheorem{lemma}{\nameLemma}[section]
-\newtheorem{algo}{\nameAlgorithm}[section]
-\newtheorem{conjecture}{\nameConjecture}[section]
+\newtheorem{definition}{\nameDefinition}[chapter]
+\newtheorem{assumption}{\nameAssumption}[chapter]
+\newtheorem{theorem}{\nameTheorem}[chapter]
+\newtheorem{lemma}{\nameLemma}[chapter]
+\newtheorem{proposition}{\nameProposition}[chapter]
+\newtheorem{algo}{\nameAlgorithm}[chapter]
+\newtheorem{conjecture}{\nameConjecture}[chapter]
 \newtheorem{example}{\nameExample}[chapter] % added by WU,Zhaojun
+\newtheorem{remark}{\nameRemark}[chapter]
+\newenvironment{proof}{\textit{Proof}.}{\hfill$\square$}
 
 \def\defi#1{\nameDefinition~\ref{#1}}
 \def\theo#1{\nameTheorem~\ref{#1}}
+% \def\lemma#1{\nameLemma~\ref{#1}}
+% \def\proposition#1{\nameProposition~\ref{#1}}
 \def\alg#1{\nameAlgorithm~\ref{#1}}
 \def\exam#1{\nameExample~\ref{#1}} % added by WU,Zhaojun
 %end
